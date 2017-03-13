@@ -1,0 +1,8 @@
+
+.DS_Store
+.idea/
+.qicon
+build.sbt
+lib_managed/
+project/
+target/
