@@ -12,4 +12,4 @@ phases:
       - sbt package
 artifacts:
   files:
-    - target/scala-2.11/lambda-demo-assembly-1.0.jar
+    - lambda-demo-assembly-1.0.jar
