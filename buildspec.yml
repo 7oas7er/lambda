@@ -9,7 +9,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - sbt package
+      - sbt assembly
 artifacts:
   files:
     - target/scala-2.11/lambda-demo_2.11-1.0.jar
