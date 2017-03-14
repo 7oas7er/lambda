@@ -10,5 +10,6 @@ lazy val root = (project in file(".")).
     retrieveManaged := true,
     libraryDependencies += "com.amazonaws" % "aws-lambda-java-core" % "1.0.0",
     libraryDependencies += "com.amazonaws" % "aws-lambda-java-events" % "1.0.0",
-    libraryDependencies += "com.amazonaws" % "aws-lambda-java-log4j" % "1.0.0"
+    libraryDependencies += "com.amazonaws" % "aws-lambda-java-log4j" % "1.0.0",
+    libraryDependencies += "io.github.yeghishe" %% "scala-aws-lambda-utils" % "0.0.2"
   )
