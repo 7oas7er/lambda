@@ -1,14 +1,12 @@
-package io.github.yeghishe
+package example
 
 import com.amazonaws.services.lambda.runtime.Context
-
-import scala.concurrent.Future
 import io.circe.generic.auto._
 import io.github.yeghishe.lambda._
 
 // handler io.github.yeghishe.MySimpleHander::handler
 // input "foo"
-object MySimpleHander extends App {
+object MySimpleHandler extends App {
   def handler(name: String, context: Context): String = s"Hello $name"
 }
 
