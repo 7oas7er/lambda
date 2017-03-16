@@ -18,6 +18,6 @@ case class Greeting(message: String)
 class MyHandler extends Handler[Name, Greeting] {
   def handler(name: Name, context: Context): Greeting = {
     logger.info(s"Name is $name")
-    Greeting(s"Hello ${name.name}")
+    Greeting(s"Hello ${name.name}. Have a nice day!")
   }
 }
