@@ -18,5 +18,5 @@ phases:
 artifacts:
   type: zip
   files:
-    - target/scala-2.11/lambda-demo-assembly-1.0.jar
+    - lib/lambda-demo-assembly-1.0.jar
     - NewSamTemplate.yaml
