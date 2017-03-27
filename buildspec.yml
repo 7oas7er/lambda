@@ -10,8 +10,8 @@ phases:
     commands:
       - echo Build completed on `date`
       - sbt assembly
-      - mkdir project/lib
-      - cp project/lambda-demo-assembly-1.0.jar project/lib
+      - mkdir lib
+      - cp target/scala-2.11/lambda-demo-assembly-1.0.jar lib
   install:
     commands:
       - aws cloudformation package --template-file samTemplate.yaml --s3-bucket testbucket-77 --output-template-file NewSamTemplate.yaml
