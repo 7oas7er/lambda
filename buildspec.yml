@@ -5,11 +5,11 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Run the test and package the code...
-      - sbt run
+      - sbt compile
+      - sbt assembly
   post_build:
     commands:
       - echo Build completed on `date`
-      - sbt assembly
       - mkdir lib
       - cp target/scala-2.11/lambda-demo-assembly-1.0.jar lib
   install:
