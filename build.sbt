@@ -13,3 +13,9 @@ lazy val root = (project in file(".")).
     libraryDependencies += "com.amazonaws" % "aws-lambda-java-log4j" % "1.0.0",
     libraryDependencies += "io.github.yeghishe" %% "scala-aws-lambda-utils" % "0.0.2"
   )
+
+assemblyMergeStrategy in assembly :=
+    {
+      case PathList("META-INF", xs @ _*) => MergeStrategy.discard
+      case x => MergeStrategy.first
+    }
