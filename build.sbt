@@ -8,6 +8,7 @@ lazy val root = (project in file(".")).
     version := "1.0",
     scalaVersion := "2.11.4",
     retrieveManaged := true,
+    target in assembly := file("project"),
     libraryDependencies += "com.amazonaws" % "aws-lambda-java-core" % "1.0.0",
     libraryDependencies += "com.amazonaws" % "aws-lambda-java-events" % "1.0.0",
     libraryDependencies += "com.amazonaws" % "aws-lambda-java-log4j" % "1.0.0",
