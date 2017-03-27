@@ -1,9 +1,6 @@
 version: 0.1
 
 phases:
-  install:
-    commands:
-      - aws cloudformation package --template-file samTemplate.yaml --s3-bucket testbucket-77 --output-template-file NewSamTemplate.yaml
   build:
     commands:
       - echo Build started on `date`
@@ -15,6 +12,7 @@ phases:
       - echo Build completed on `date`
       - mkdir lib
       - cp target/scala-2.11/lambda-demo-assembly-1.0.jar lib
+      - aws cloudformation package --template-file samTemplate.yaml --s3-bucket testbucket-77 --output-template-file NewSamTemplate.yaml
 artifacts:
   type: zip
   files:
