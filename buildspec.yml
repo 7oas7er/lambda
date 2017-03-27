@@ -10,11 +10,12 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - mkdir target/lib
-      - cp target/scala-2.11/lambda-demo-assembly-1.0.jar target/lib
+      - mkdir deploy
+      - mkdir deploy/lib
+      - cp target/scala-2.11/lambda-demo-assembly-1.0.jar deploy/lib
       - aws cloudformation package --template-file samTemplate.yaml --s3-bucket testbucket-77 --output-template-file NewSamTemplate.yaml
 artifacts:
   type: zip
   files:
-    - target/lib/lambda-demo-assembly-1.0.jar
+    - deploy/lib/lambda-demo-assembly-1.0.jar
     - NewSamTemplate.yaml

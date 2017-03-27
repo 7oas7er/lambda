@@ -7,7 +7,7 @@ Resources:
     Properties:
       Handler: example.MyHandler
       Runtime: java8
-      CodeUri: target
+      CodeUri: deploy
       Description: ''
       MemorySize: 512
       Timeout: 15
