@@ -6,7 +6,7 @@ import org.scalatest.junit.JUnitRunner
 class MyHandlerSuite extends FunSuite {
 
   test("foobar") {
-    assert(1 == 1, "test should run")
+    assert(1 == 2, "test should run")
   }
 
 }
