@@ -6,6 +6,7 @@ phases:
       - echo Build started on `date`
       - echo Run the test and package the code...
       - sbt compile
+      - sbt test
       - sbt assembly
   post_build:
     commands:
